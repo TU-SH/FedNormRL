@@ -26,7 +26,22 @@ Federated Learning (McMahan et al., 2017) enables collaborative model training a
 - Clients send model updates (not data) to server
 - Server aggregates updates via weighted average:
 
-$$ωt+1=∑k∈Knk∑k∈Knkωtk\omega_{t+1} = \sum_{k \in K} \frac{n_k}{\sum_{k \in K} n_k} \omega_t^kωt+1​=k∈K∑​∑k∈K​nk​nk​​ωtk$$​
+$$\omega_{t+1} = \sum_{k \in K} \frac{n_k}{\sum_{k \in K} n_k} \omega_t^k$$ 
+
+### Key challenges in real-world FL:
+
+- Non-IID data — Client data reflects local usage, demographics, and environment, causing statistical heterogeneity
+- Concept drift — The underlying data distribution changes over time or across clients
+- External covariate shift — Unique to FL; feature distributions differ between clients, slowing global convergence
+
+<img width="1440" height="1160" alt="image" src="https://github.com/user-attachments/assets/ad76e34e-8211-49d6-a528-752b60dde329" /> 
+
+### Concept Drift
+
+Concept drift occurs when the joint probability distribution $P(X, Y)$ changes between time instants $t₀$ and $t₁$:
+
+$$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
+
 
 # Train
 
