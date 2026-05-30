@@ -43,11 +43,17 @@ Concept drift occurs when the joint probability distribution $P(X, Y)$ changes b
 $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
 
 **Three main types**
-- Covariate Shift (Virtual Concept Drift): $P(X)$ changes, $P(Y|X)$ stable; Feature distribution shifts, decision boundary unchanged
+- **Covariate Shift (Virtual Concept Drift)**: $P(X)$ changes, $P(Y|X)$ stable; Feature distribution shifts, decision boundary unchanged
   
-- Real Concept Drift: $P(Y|X)$ changes, $P(X)$ stable;Decision boundary shifts; feature distribution unchanged
+- **Real Concept Drift**: $P(Y|X)$ changes, $P(X)$ stable; Decision boundary shifts; feature distribution unchanged
   
-- Total (Hybrid) Drift: Both $P(X)$ and $P(Y|X)$ change; Combined covariate and real drift
+- **Total (Hybrid) Drift**: Both $P(X)$ and $P(Y|X)$ change; Combined covariate and real drift
+
+<img width="1440" height="680" alt="image" src="https://github.com/user-attachments/assets/c1105157-9ee9-4b1b-b56b-c0bdab599ef0" />
+
+Additionally, by speed of change: **Abrupt, Gradual, Incremental, Recurring**.
+
+
 
 
 
