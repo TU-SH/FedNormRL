@@ -51,7 +51,20 @@ $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
 
 <img width="1440" height="680" alt="image" src="https://github.com/user-attachments/assets/c1105157-9ee9-4b1b-b56b-c0bdab599ef0" />
 
-Additionally, by speed of change: **Abrupt, Gradual, Incremental, Recurring**.
+Additionally, by speed of change: **Abrupt, Gradual, Incremental, Recurring**. 
+
+<img width="1440" height="1026" alt="image" src="https://github.com/user-attachments/assets/1ff5cabd-c0b3-40ec-8cbe-e9712f9d8eeb" />
+
+## Why Normalization?
+
+In FL, each client's local training on its unique data causes `internal covariate shift` — layer input distributions shift during training, slowing convergence. Because each client's shift is unique to its data, this results in `external covariate shift` between clients — a phenomenon unique to FL.
+
+<img width="353" height="221" alt="image" src="https://github.com/user-attachments/assets/5b0068bb-881d-4afa-91cb-3f955c92d334" />
+
+
+Normalization techniques standardize layer activations:
+
+$$N(x) = \frac{x - \mu}{\sqrt{\sigma^2 - \epsilon}}\gamma + \beta$$
 
 
 
