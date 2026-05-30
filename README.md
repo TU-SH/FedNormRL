@@ -70,40 +70,7 @@ Some of the commonly used conventional normalization techniques (along with thei
 
   ## FedNormRL framework
 
-Input Data
-    │
-    ▼
-┌─────────────────────────────────────────┐
-│         Convolutional Layer             │
-│   + Weight Normalization (WN)           │  ← Stabilizes weights, prevents client bias
-└─────────────────────────────────────────┘
-    │
-    ▼  Feature map $y ∈ ℝ^(N×Cout×Hout×Wout)$
-┌─────────────────────────────────────────┐
-│     Adaptive Group Normalization (AGN)  │
-│                                         │
-│   State = $[μ_y, σ²_y, validation_loss]$  │
-│              │                          │
-│              ▼                          │
-│         DQN (RL Agent)                  │  ← Selects BN (a=1) or GN (a=0)
-│       ε-greedy policy                   │
-│              │                          │
-│    ┌─────────┴─────────┐                │
-│    ▼                   ▼                │ 
-│  BN (a=1)           GN (a=0)            │
-│    └─────────┬─────────┘                │
-│              ▼                          │
-│    Scale & Shift: γ·ŷ + β               │
-└─────────────────────────────────────────┘
-    │
-    ▼
-  Output → Fully Connected Layers → Logits
-    │
-    ▼
-  Reward = -(validation_loss_after - validation_loss_before)
-    │
-    ▼
-  Q-value Update → DQN Backpropagation
+<img width="233" height="338" alt="image" src="https://github.com/user-attachments/assets/d73b4cff-b560-4a6c-9432-29bcd00c99d5" />
 
 
 
