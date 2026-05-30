@@ -45,8 +45,8 @@ $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
 **Three main types**
 |Type| formal definition | Description |
 |----|-------------------|-------------|
-|Covariate Shift (Virtual Concept Drift)| $P(X)$ changes, $P(Y|X)$ stable|Feature distribution shifts; decision boundary unchanged|
-|Real Concept Drift|$P(Y|X)$ changes, $P(X)$ stable|Decision boundary shifts; feature distribution unchanged|
+|Covariate Shift (Virtual Concept Drift)| $P(X)$ changes, $P(Y|X)$ stable| Feature distribution shifts; decision boundary unchanged|
+|Real Concept Drift|$P(Y|X)$ changes, $P(X)$ stable| Decision boundary shifts; feature distribution unchanged|
 |Total (Hybrid) Drift|Both $P(X)$ and $P(Y|X)$ change|Combined covariate and real drift|
 
 
