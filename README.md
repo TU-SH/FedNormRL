@@ -70,7 +70,7 @@ Some of the commonly used conventional normalization techniques (along with thei
 
   ## FedNormRL framework
 
-<img width="270" height="338" alt="image" src="https://github.com/user-attachments/assets/d73b4cff-b560-4a6c-9432-29bcd00c99d5" />
+<img width="250" height="350" alt="image" src="https://github.com/user-attachments/assets/d73b4cff-b560-4a6c-9432-29bcd00c99d5" />
 
 
 
