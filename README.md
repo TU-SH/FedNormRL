@@ -51,13 +51,10 @@ $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
 
 <img width="1440" height="680" alt="image" src="https://github.com/user-attachments/assets/c1105157-9ee9-4b1b-b56b-c0bdab599ef0" />
 
-Additionally, by speed of change: **Abrupt, Gradual, Incremental, Recurring**. 
-
-<img width="1440" height="1026" alt="image" src="https://github.com/user-attachments/assets/1ff5cabd-c0b3-40ec-8cbe-e9712f9d8eeb" />
 
 ## Why Normalization?
 
-In FL, each client's local training on its unique data causes `internal covariate shift` — layer input distributions shift during training, slowing convergence. Because each client's shift is unique to its data, this results in `external covariate shift` between clients — a phenomenon unique to FL.
+In FL, each client's local training on its unique data causes `internal covariate shift` — layer input distributions shift during training, slowing convergence. Because each client's shift is unique to its data, this results in `external covariate shift` between clients — a phenomenon unique to FL (see figure below, Du et al., 2022).
 
 <img width="353" height="221" alt="image" src="https://github.com/user-attachments/assets/5b0068bb-881d-4afa-91cb-3f955c92d334" />
 
@@ -65,6 +62,48 @@ In FL, each client's local training on its unique data causes `internal covariat
 Normalization techniques standardize layer activations:
 
 $$N(x) = \frac{x - \mu}{\sqrt{\sigma^2 - \epsilon}}\gamma + \beta$$
+
+Some of the commonly used conventional normalization techniques (along with their drwabacks in non-IID and heterogenous settings) are: 
+- **Batch Normalization (BN)**: Normalizes across mini-batch; effective in IID but problematic in non-IID FL due to mismatched local/global statistics
+- **Group Normalization (GN)**: Normalizes within channel groups; batch-size independent, better for small/heterogeneous batches
+- **Layer Normalization (LN)**: Normalizes across all channels; assumes uniform neuron contributions
+
+  ## FedNormRL framework
+
+Input Data
+    │
+    ▼
+┌─────────────────────────────────────────┐
+│         Convolutional Layer             │
+│   + Weight Normalization (WN)           │  ← Stabilizes weights, prevents client bias
+└─────────────────────────────────────────┘
+    │
+    ▼  Feature map $y ∈ ℝ^(N×Cout×Hout×Wout)$
+┌─────────────────────────────────────────┐
+│     Adaptive Group Normalization (AGN)  │
+│                                         │
+│   State = $[μ_y, σ²_y, validation_loss]$  │
+│              │                          │
+│              ▼                          │
+│         DQN (RL Agent)                  │  ← Selects BN (a=1) or GN (a=0)
+│       ε-greedy policy                   │
+│              │                          │
+│    ┌─────────┴─────────┐                │
+│    ▼                   ▼                │ 
+│  BN (a=1)           GN (a=0)            │
+│    └─────────┬─────────┘                │
+│              ▼                          │
+│    Scale & Shift: γ·ŷ + β               │
+└─────────────────────────────────────────┘
+    │
+    ▼
+  Output → Fully Connected Layers → Logits
+    │
+    ▼
+  Reward = -(validation_loss_after - validation_loss_before)
+    │
+    ▼
+  Q-value Update → DQN Backpropagation
 
 
 
