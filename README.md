@@ -50,7 +50,7 @@ $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
   
 - **Total (Hybrid) Drift**: Both $P(X)$ and $P(Y|X)$ change; Combined covariate and real drift
 
-<img width="1440" height="680" alt="image" src="https://github.com/user-attachments/assets/c1105157-9ee9-4b1b-b56b-c0bdab599ef0" />
+<img width="1440" height="840" alt="image" src="https://github.com/user-attachments/assets/b23c4e1a-cf2d-4001-b901-bd6420f93ecd" />
 
 
 ## Why Normalization?
