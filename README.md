@@ -139,10 +139,14 @@ Backpropagation minimizes the squared TD error:
 
 $$L = \left[ r + \gamma_{RL} \cdot \max_{a'} Q(\text{state}', a') - Q(\text{state}, a) \right]^2$$
 
-
-
-
-
+### MDP Formulation
+|MDP Component | FedNormRL Implementation |
+|--------------|--------------------------|
+|State         | [feature map mean, feature map variance, validation loss per round]|
+|Action        |  a=0 → Group Normalization; a=1 → Batch Normalization                        |
+|Reward        |  Negative change in validation loss (positive if loss decreases)                       |
+|Policy        |  ε-greedy with decaying ε (exploration → exploitation over rounds)                   |
+|Value Function|  DQN Q-values updated via Bellman equation with Adam optimizer                       |
 
 
 
