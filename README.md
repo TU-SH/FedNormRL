@@ -115,7 +115,7 @@ $$y'_{n,c,h,w} = \gamma_c \cdot \hat{y}_{n,c,h,w} + \beta_c$$
 
 The RL agent is a Deep Q-Network with architecture: 3 → 128 → 64 → 2 (ReLU activations):
 
-- **Input (3)**: State vector = $[\mu_y,\ \sigma^2_y,\ \text{validation\_loss\_per\_round}]$
+- **Input (3)**: State vector = $[\mu_y,\ \sigma^2_y,\ \text{validation\loss\per\round}]$
 - **Hidden layers**: 128 units → 64 units (ReLU)
 - **Output (2)**: Q-values for actions {GN (0), BN (1)} 
 
