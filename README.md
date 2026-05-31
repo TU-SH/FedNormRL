@@ -86,6 +86,32 @@ $$\sigma_{WN} = \sqrt{\frac{1}{C_{in} K_h K_w - 1} \sum_i \sum_j \sum_k (W_{i,j,
 
 **Effect of WN**: Ensures zero-mean, unit-variance weights across clients, preventing clients with small weight norms from being dominated during global aggregation. 
 
+## Adaptive Group Normalization (AGN)
+
+AGN dynamically selects between BN and GN per communication round, per client, based on the RL agent's decision.
+
+**Batch Normalization**
+
+when action $a=1$:
+
+$$\mu_{BN,c} = \frac{1}{N H_{out} W_{out}} \sum_n \sum_h \sum_w y_{n,c,h,w}$$
+
+$$\hat{y}_{n,c,h,w} = \frac{y_{n,c,h,w} - \mu_{BN,c}}{\sqrt{\sigma^2_{BN,c} + \varepsilon}}$$
+
+**Group Normalization (GN)** 
+
+when action $a=0$ (channels split into 2 groups):
+
+$$\mu_{GN,g} = \frac{1}{N H_{out} W_{out} (C_{out}/2)} \sum_n \sum_{c' \in g} \sum_h \sum_w y_{n,c',h,w}$$
+
+
+$$\hat{y}_{n,c,h,w} = \frac{y_{n,c,h,w} - \mu_{GN,g}}{\sqrt{\sigma^2_{GN,g} + \varepsilon}}$$
+
+Both followed by learnable scale and shift:
+
+$$y'_{n,c,h,w} = \gamma_c \cdot \hat{y}_{n,c,h,w} + \beta_c$$
+
+
 
 
 
