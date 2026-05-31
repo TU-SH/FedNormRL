@@ -38,7 +38,7 @@ $$\omega_{t+1} = \sum_{k \in K} \frac{n_k}{\sum_{k \in K} n_k} \omega_t^k$$
 
 ### Concept Drift
 
-Concept drift occurs when the joint probability distribution $P(X, Y)$ changes between time instants $t₀$and $t₁$:
+Concept drift occurs when the joint probability distribution $P(X, Y)$ changes between time instants $t_o$ and $t_1$:
 
 $$\exists X : P_{t_0}(X, Y) \neq P_{t_1}(X, Y)$$
 
