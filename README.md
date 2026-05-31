@@ -73,6 +73,21 @@ Some of the commonly used conventional normalization techniques (along with thei
 
 <img width="250" height="350" alt="image" src="https://github.com/user-attachments/assets/d73b4cff-b560-4a6c-9432-29bcd00c99d5" />
 
+## Weight Normalization (WN)
+WN reparameterizes the convolutional weight tensor $W$: 
+
+$$\hat{W} = \frac{W - \mu_{WN}}{\sigma_{WN}}$$
+
+Where, 
+
+$$\mu_{WN} = \frac{1}{C_{in} K_h K_w} \sum_i \sum_j \sum_k W_{i,j,k}$$
+
+$$\sigma_{WN} = \sqrt{\frac{1}{C_{in} K_h K_w - 1} \sum_i \sum_j \sum_k (W_{i,j,k} - \mu_{WN})^2 + \varepsilon}$$
+
+**Effect of WN**: Ensures zero-mean, unit-variance weights across clients, preventing clients with small weight norms from being dominated during global aggregation. 
+
+
+
 
 
 
