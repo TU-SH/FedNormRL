@@ -224,7 +224,7 @@ Legend
 
 
 
-**Office-Caltech Dataset**
+#### Office-Caltech Dataset
 
 **Training Phase**
 |Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
@@ -244,7 +244,7 @@ Legend
 
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/3167de63-1582-4d8f-9c87-d48becbe4243" />
 
-**DomainNet Dataset**
+#### DomainNet Dataset
 **Training Phase**
 |Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
 |--------------------|--------------|------------------|-----------|---------------|
@@ -262,6 +262,25 @@ Legend
 
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/af1c2132-92b5-4e07-85f2-19243c1df945" />
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/dbc92138-89af-4e45-9b01-5f040b62a340" />
+
+### Validation Loss 
+
+#### DIGIT Dataset 
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.289       | 2.0551            | 2.2769          |     1.8826          |
+| Round 50           |  0.2846      | 0.0538            | 0.3026         |    0.0555        |
+| Round 100          |  0.0588     | 0.0065            | 0.0596       |     0.0067        |
+
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/4c68d7c9-3f9e-4dac-ba25-0cf6fe4fb2bf" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/4001fed8-5089-4d81-a525-39212adf6e7d" />
+
+
+#### Office-Caltech Dataset 
+
+#### DomainNet Dataset 
+
+
 
 
 
