@@ -226,6 +226,22 @@ Legend
 
 **Office-Caltech Dataset**
 
+**Training Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  23.36       | 28.35             | 23.36          |     28.35          |
+| Round 50           |  93.04       | 92.44             | 93.04          |    92.44          |
+| Round 100          |  95.70       | 97.33              | 96.35         |     97.33         |
+
+**Testing Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  22.24     | 27.36            | 22.24         |     27.36         |
+| Round 50           |   56.69      | 64.37              | 56.69          |  64.37           |
+| Round 100          |  55.91      | 65.35             | 55.91       |     65.35      |
+
+<img width="482" height="402" alt="image" src="https://github.com/user-attachments/assets/a1d66508-d09e-4c71-ad8f-b13e0fb411df" />
+<img width="419" height="350" alt="image" src="https://github.com/user-attachments/assets/3167de63-1582-4d8f-9c87-d48becbe4243" />
 
 
 
