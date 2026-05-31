@@ -331,25 +331,44 @@ Legend
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/be56bd64-4416-44cb-8e73-44ecb0c59c0b" />
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/3bb23449-0fa9-422d-83c8-635ae3102ad6" />
 
-## Normalization vs. Non-Normalization 
+### Normalization vs. Non-Normalization 
 The prediction drift matrix uses `Jensen-Shannon Divergence (JSD)` to compare model prediction distributions on the combined DIGIT test set:
 
 |Model Pair             | JSD     |Interpretation|
 |-------------|---------------|------------------|
 |FedAvg vs. FedNN            |0.0133               |Moderate divergence (static normalization vs no normalization)|
-|**FedAvg vs FedNormRL**             |0.0187               |Highest divergence — RL-adaptive strategy vs no normalization|
+|**FedAvg vs FedNormRL**             |**0.0187**               |**Highest divergence — RL-adaptive strategy vs no normalization**|
 |FedNN vs FedNormRL                              |0.0111|Least divergence — both normalization-based, FedNormRL superior|
 
 FedNormRL achieves the most balanced prediction distribution across digit classes (0–9), demonstrating better generalization under covariate shift.
 
 <img width="479" height="247" alt="image" src="https://github.com/user-attachments/assets/4eec8b35-a528-454c-ad7a-ce10c32d764e" />
 
+### Summary Table
+Percentage Improvement in Test Accuracy of FedNormRL over FedNN. 
+
+|Dataset                |Round 50         |Round 100                |
+|-------------|---------|-------------------------------------------|
+|DIGIT (all)  | +8.55%        |+4.92%                |
+|DIGIT (sel)  |+9.23%         |+5.24%                |
+|Office-Caltech (all)   |+13.54%         |+16.88%                |
+|Office-Caltech (sel)   |+13.54%         |+16.88%                |
+|DomainNet (all)         |+25.87%         |+28.27%                |
+|DomainNet (sel)             |+25.87%         |+28.27%                |
 
 
+Percentage Reduction in Validation Loss (Test Phase) of FednormRL over FedNN
 
+|Dataset                |Round 50         |Round 100                |
+|-------------|---------|-------------------------------------------|
+|DIGIT (all)  | 29.12%        |30.01%                |
+|DIGIT (sel)  |30.07%         |32.76%                |
+|Office-Caltech (all)   |45.60%         |46.93%                |
+|Office-Caltech (sel)   |45.60%         |47.29%                |
+|DomainNet (all)         |58.36%         |54.22%                |
+|DomainNet (sel)             |58.36%         |54.22%                |
 
-
-
+FedNormRL's advantage grows with drift severity — the more challenging the dataset, the larger the improvement.
 
 
 
