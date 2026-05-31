@@ -158,7 +158,16 @@ Three multi-domain benchmark datasets simulating non-IID feature shift (covariat
 |------------|-----------------------|-----------------|--------------|
 | DIGIT      |MNIST, MNIST-M, SVHN, SynthDigits, USPS|Digit classification (0–9)        |Mild-Moderate            |
 |Office-Caltech         |Amazon, DSLR, Webcam, Caltech |Object classification (10 classes)|Moderate-Severe              |
-|DomainNet| Real, Clipart, Painting, Sketch, Quickdraw, Infograph|Object classification (345 classes)|Severe          |              |
+|DomainNet| Real, Clipart, Painting, Sketch, Quickdraw, Infograph|Object classification (345 classes)|Severe          |  
+
+
+<img width="293" height="233" alt="image" src="https://github.com/user-attachments/assets/3a48ab77-2c85-4e46-bfa6-0ee87abf3f3b" /> 
+
+
+
+
+- Train / Validation split: 90% / 10% (random sampling)
+- Each domain assigned to a separate client, creating non-IID feature shift
 
 
 
