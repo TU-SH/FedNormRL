@@ -176,6 +176,18 @@ CNN (modified LeNet-5) + AGN + DQN:
 
 ### Hyperparameters
 
+|Parameter    | Value   |
+|-------------|---------|
+| Communication round            | 100     |
+| Client participation probability           | 0.4         |
+| Local SGD learning rate            | 0.01         |
+| Batch size            |50         |
+| DQN learning rate (Adam)            |0.001         |
+| Discount factor $\gamma_RL$            |0.9         |
+| Initial exploration rate $\epsilon$          |0.1         |
+| $\epsilon$ decay per round            |0.999         |
+| GN groups          |2         |
+
 
 
 
