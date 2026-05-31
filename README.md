@@ -129,7 +129,7 @@ $$Q(\text{state}, a) \leftarrow Q(\text{state}, a) + \alpha \left[ r + \gamma_{R
 
 ### Reward Signal 
 
-$$r = -(\text{validation\_loss}_{after} - \text{validation\_loss}_{before})$$
+$$r = -(\text{validation-loss}_{after} - \text{validation-loss}_{before})$$
 
 A positive reward reinforces the chosen normalization strategy when validation loss decreases.
 
