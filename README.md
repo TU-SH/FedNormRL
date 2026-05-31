@@ -168,7 +168,8 @@ Three multi-domain benchmark datasets simulating non-IID feature shift (covariat
 
 CNN (modified LeNet-5) + AGN + DQN:
 
-<img width="1440" height="1480" alt="image" src="https://github.com/user-attachments/assets/ad74dff8-a3be-4f83-9489-4eaef3294cee" />
+<img width="1440" height="1360" alt="image" src="https://github.com/user-attachments/assets/fc82c516-bd9e-4b5b-ab29-1ae6be2290c6" />
+
 
 ### DQN Architecture
 
