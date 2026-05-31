@@ -117,8 +117,27 @@ The RL agent is a Deep Q-Network with architecture: 3 → 128 → 64 → 2 (ReLU
 
 - **Input (3)**: State vector = $[\mu_y,\ \sigma^2_y,\ \text{validation-loss-per-round}]$
 - **Hidden layers**: 128 units → 64 units (ReLU)
-- **Output (2)**: Q-values for actions {GN (0), BN (1)} 
+- **Output (2)**: Q-values for actions {GN (0), BN (1)}
 
+### Action selection via ε-greedy policy
+
+$$a = \begin{cases} \text{random action} \in \{0, 1\} & \text{with probability } \epsilon \\ \arg\max_a\, Q(\text{state}, a) & \text{with probability } 1 - \epsilon \end{cases}$$
+
+### Q-value update (Bellman equation)
+
+$$Q(\text{state}, a) \leftarrow Q(\text{state}, a) + \alpha \left[ r + \gamma_{RL} \cdot \max_{a'} Q(\text{state}', a') - Q(\text{state}, a) \right]$$
+
+### Reward Signal 
+
+$$r = -(\text{validation\_loss}_{after} - \text{validation\_loss}_{before})$$
+
+A positive reward reinforces the chosen normalization strategy when validation loss decreases.
+
+### DQN Training 
+
+Backpropagation minimizes the squared TD error: 
+
+$$L = \left[ r + \gamma_{RL} \cdot \max_{a'} Q(\text{state}', a') - Q(\text{state}, a) \right]^2$$
 
 
 
