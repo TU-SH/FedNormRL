@@ -149,6 +149,18 @@ $$L = \left[ r + \gamma_{RL} \cdot \max_{a'} Q(\text{state}', a') - Q(\text{stat
 |Value Function|  DQN Q-values updated via Bellman equation with Adam optimizer                       |
 
 
+## Experimental Setup 
+
+### Datasets
+Three multi-domain benchmark datasets simulating non-IID feature shift (covariate shift / virtual concept drift):
+
+|Dataset     | Domains/Subsets       |Task     |Drift Severity        | 
+|------------|-----------------------|-----------------|--------------|
+| DIGIT      |MNIST, MNIST-M, SVHN, SynthDigits, USPS|Digit classification (0–9)        |Mild-Moderate            |
+|Office-Caltech         |Amazon, DSLR, Webcam, Caltech |Object classification (10 classes)|Moderate-Severe              |
+|DomainNet| Real, Clipart, Painting, Sketch, Quickdraw, Infograph|Object classification (345 classes)|Severe          |              |
+
+
 
 # Train
 
