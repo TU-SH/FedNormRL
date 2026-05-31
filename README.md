@@ -198,6 +198,7 @@ CNN (modified LeNet-5) + AGN + DQN:
 Legend
 - All - all clients participation
 - Sel - selected clients participation
+- plots alignment - left (all), right (sel)
 
 ### Accuracy (%)
 
@@ -288,7 +289,48 @@ Legend
 
 #### Office-Caltech Dataset 
 
+**Training Phase**
+
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.1244      | 2.0927            | 2.1244          |     2.0927          |
+| Round 50           |  0.2339      | 0.2464          | 0.2339       |    0.2464        |
+| Round 100          |  0.0616     | 0.0887          | 0.1342      |     0.0887       |
+
+
+**Testing Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.1234       | 2.0973          | 2.1234          |     2.0973          |
+| Round 50           |  3.0043      | 1.6343           | 3.0043         |    1.6343     |
+| Round 100          |  3.8270   | 2.0308        | 3.8528     |     2.0308   |
+
+
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/70b82b4c-7abf-4d04-be89-4d7005c8cf71" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/26fb99b6-9a63-4b73-9f81-5ad0f2a8d8fa" />
+
+
+
 #### DomainNet Dataset 
+**Training Phase**
+
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.2312      | 2.2307            | 2.2312          |     2.2307          |
+| Round 50           |  0.6013    | 0.0426        | 0.6013       |    0.0426        |
+| Round 100          |  0.2325     | 0.0141          | 0.2325      |     0.0141       |
+
+
+**Testing Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.2337       | 2.2311         | 2.2337        |     2.2311         |
+| Round 50           |  6.2424      | 2.5993           | 6.2424         |    2.5993     |
+| Round 100          |  6.7465   | 3.0882      | 6.7465     |     3.0882  |
+
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/be56bd64-4416-44cb-8e73-44ecb0c59c0b" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/3bb23449-0fa9-422d-83c8-635ae3102ad6" />
+
 
 
 
