@@ -244,9 +244,24 @@ Legend
 
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/3167de63-1582-4d8f-9c87-d48becbe4243" />
 
-
-
 **DomainNet Dataset**
+**Training Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  22.32       | 31.04            | 22.32          |     31.04          |
+| Round 50           |  84.77       | 98.74             | 84.77          |    98.74          |
+| Round 100          |  92.40       | 99.53              | 92.40         |     99.53         |
+
+**Testing Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  21.78     | 30.87           | 21.78        |     30.87         |
+| Round 50           |  47.57      | 59.88              | 47.57          |  59.88           |
+| Round 100          |  47.68      | 61.16             | 47.68      |     61.16      |
+
+
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/af1c2132-92b5-4e07-85f2-19243c1df945" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/dbc92138-89af-4e45-9b01-5f040b62a340" />
 
 
 
