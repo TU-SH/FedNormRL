@@ -195,15 +195,32 @@ CNN (modified LeNet-5) + AGN + DQN:
 
 ## Results 
 
-### Accuracy
+legend
+All - all clients participation
+Sel - selected clients participation
+
+### Accuracy (%)
+
+#### DIGIT Dataset
+
+**Training Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  15.04       | 36.59             | 15.04          |     34.37          |
+| Round 50           |  91.81       | 99.10              | 90.94          |    98.86           |
+| Round 100          |  99.2        | 100                | 99.25         |     100          |
 
 
-**DIGIT Dataset**
+
+
 |Communication Round | FedNN (Test) | FedNormRL (Test) | 
 |--------------------|--------------|------------------|
 | Round 1                | 11.51%             | 25.63%                 |
 | Round 50               | 75.06%             | 81.48%                 |
 | Round 100              | 77.79%             | 81.62%                 |
+
+<img width="452" height="377" alt="image" src="https://github.com/user-attachments/assets/9c5d90f5-2bd9-4a83-8b1c-fb4ff60c2457" />
+
 
 **Office-Caltech Dataset**
 |Communication Round | FedNN (Test) | FedNormRL (Test) | 
@@ -211,6 +228,7 @@ CNN (modified LeNet-5) + AGN + DQN:
 | Round 1                | 22.24%             | 27.36%                 |
 | Round 50               | 56.69%             | 64.37%                 |
 | Round 100              | 55.91%             | 65.35%                 |
+
 
 
 **DomainNet Dataset**
@@ -221,7 +239,6 @@ CNN (modified LeNet-5) + AGN + DQN:
 | Round 100              | 47.68%             | 61.16%                 |
 
 
-<img width="452" height="377" alt="image" src="https://github.com/user-attachments/assets/9c5d90f5-2bd9-4a83-8b1c-fb4ff60c2457" />
 
 
 
