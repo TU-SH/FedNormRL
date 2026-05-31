@@ -161,13 +161,22 @@ Three multi-domain benchmark datasets simulating non-IID feature shift (covariat
 |DomainNet| Real, Clipart, Painting, Sketch, Quickdraw, Infograph|Object classification (345 classes)|Severe          |  
 
 
-<img width="293" height="233" alt="image" src="https://github.com/user-attachments/assets/3a48ab77-2c85-4e46-bfa6-0ee87abf3f3b" /> 
-
-
-
-
 - Train / Validation split: 90% / 10% (random sampling)
 - Each domain assigned to a separate client, creating non-IID feature shift
+
+### Model Architecture
+
+CNN (modified LeNet-5) + AGN + DQN:
+
+Input Image
+    │
+Conv1: 6 filters (5×5) + WN + ReLU + MaxPool (2×2) + AGN
+    │
+Conv2: 16 filters (5×5) + WN + ReLU + MaxPool (2×2) + AGN
+    │
+Flatten
+    │
+FC1 (ReLU) → FC2 (ReLU) → FC3 → Logits (10 classes)
 
 
 
