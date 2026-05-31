@@ -34,7 +34,7 @@ $$\omega_{t+1} = \sum_{k \in K} \frac{n_k}{\sum_{k \in K} n_k} \omega_t^k$$
 - Concept drift — The underlying data distribution changes over time or across clients
 - External covariate shift — Unique to FL; feature distributions differ between clients, slowing global convergence
 
-<img width="428" height="310" alt="image" src="https://github.com/user-attachments/assets/c0a5794b-6226-4ebe-9147-4987971f6b59" />
+<img width="1440" height="1160" alt="image" src="https://github.com/user-attachments/assets/5b6c40c2-8165-4853-b86d-c9603ff431f9" />
 
 
 ### Concept Drift
