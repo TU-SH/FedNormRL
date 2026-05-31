@@ -183,7 +183,7 @@ CNN (modified LeNet-5) + AGN + DQN:
 | Local SGD learning rate            | 0.01         |
 | Batch size            |50         |
 | DQN learning rate (Adam)            |0.001         |
-| Discount factor $\gamma_RL$            |0.9         |
+| Discount factor $\gamma_{RL}$            |0.9         |
 | Initial exploration rate $\epsilon$          |0.1         |
 | $\epsilon$ decay per round            |0.999         |
 | GN groups          |2         |
