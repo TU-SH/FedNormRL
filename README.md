@@ -219,8 +219,8 @@ Legend
 | Round 100          |  77.79       | 81.62              | 77.46         |     81.53        |
 
 
-<img width="452" height="377" alt="image" src="https://github.com/user-attachments/assets/9c5d90f5-2bd9-4a83-8b1c-fb4ff60c2457" />
-<img width="449" height="365" alt="image" src="https://github.com/user-attachments/assets/16113f8d-2d8e-40ec-9a46-51f0cb7a4e5b" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/9c5d90f5-2bd9-4a83-8b1c-fb4ff60c2457" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/16113f8d-2d8e-40ec-9a46-51f0cb7a4e5b" />
 
 
 
