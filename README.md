@@ -331,6 +331,19 @@ Legend
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/be56bd64-4416-44cb-8e73-44ecb0c59c0b" />
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/3bb23449-0fa9-422d-83c8-635ae3102ad6" />
 
+## Normalization vs. Non-Normalization 
+The prediction drift matrix uses `Jensen-Shannon Divergence (JSD)` to compare model prediction distributions on the combined DIGIT test set:
+
+|Model Pair             | JSD     |Interpretation|
+|-------------|---------------|------------------|
+|FedAvg vs. FedNN            |0.0133               |Moderate divergence (static normalization vs no normalization)|
+|**FedAvg vs FedNormRL**             |0.0187               |Highest divergence — RL-adaptive strategy vs no normalization|
+|FedNN vs FedNormRL                              |0.0111|Least divergence — both normalization-based, FedNormRL superior|
+
+FedNormRL achieves the most balanced prediction distribution across digit classes (0–9), demonstrating better generalization under covariate shift.
+
+<img width="479" height="247" alt="image" src="https://github.com/user-attachments/assets/4eec8b35-a528-454c-ad7a-ce10c32d764e" />
+
 
 
 
