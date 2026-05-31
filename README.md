@@ -168,15 +168,16 @@ Three multi-domain benchmark datasets simulating non-IID feature shift (covariat
 
 CNN (modified LeNet-5) + AGN + DQN:
 
-Input Image
-    │
-Conv1: 6 filters (5×5) + WN + ReLU + MaxPool (2×2) + AGN
-    │
-Conv2: 16 filters (5×5) + WN + ReLU + MaxPool (2×2) + AGN
-    │
-Flatten
-    │
-FC1 (ReLU) → FC2 (ReLU) → FC3 → Logits (10 classes)
+<img width="1440" height="1480" alt="image" src="https://github.com/user-attachments/assets/ad74dff8-a3be-4f83-9489-4eaef3294cee" />
+
+### DQN Architecture
+
+<img width="1440" height="848" alt="image" src="https://github.com/user-attachments/assets/3086c245-a634-4529-b914-926a5963627a" />
+
+### Hyperparameters
+
+
+
 
 
 
