@@ -111,6 +111,13 @@ Both followed by learnable scale and shift:
 
 $$y'_{n,c,h,w} = \gamma_c \cdot \hat{y}_{n,c,h,w} + \beta_c$$
 
+## Reinforcement Learning Agent (DQN)
+
+The RL agent is a Deep Q-Network with architecture: 3 → 128 → 64 → 2 (ReLU activations):
+
+- **Input (3)**: State vector = $[μ_y, σ²_y, validation_loss_per_round]$
+- **Hidden layers**: 128 units → 64 units (ReLU)
+- **Output (2)**: Q-values for actions {GN (0), BN (1)} 
 
 
 
