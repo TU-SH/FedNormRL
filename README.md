@@ -221,6 +221,8 @@ CNN (modified LeNet-5) + AGN + DQN:
 | Round 100              | 47.68%             | 61.16%                 |
 
 
+<img width="452" height="377" alt="image" src="https://github.com/user-attachments/assets/9c5d90f5-2bd9-4a83-8b1c-fb4ff60c2457" />
+
 
 
 
