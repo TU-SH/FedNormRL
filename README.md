@@ -266,11 +266,21 @@ Legend
 ### Validation Loss 
 
 #### DIGIT Dataset 
+**Training Phase**
+
 |Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
 |--------------------|--------------|------------------|-----------|---------------|
 | Round 1            |  2.289       | 2.0551            | 2.2769          |     1.8826          |
 | Round 50           |  0.2846      | 0.0538            | 0.3026         |    0.0555        |
 | Round 100          |  0.0588     | 0.0065            | 0.0596       |     0.0067        |
+
+
+**Testing Phase**
+|Communication Round | FedNN (all) | FedNormRL (all) | FedNN (sel) | FedNormRL (sel)| 
+|--------------------|--------------|------------------|-----------|---------------|
+| Round 1            |  2.2997       | 2.1441           | 2.2992          |     2.0238          |
+| Round 50           |  0.9234      | 0.6545            | 0.9541         |    0.6672       |
+| Round 100          |  1.0971    | 0.7679           | 1.1521     |     0.7747   |
 
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/4c68d7c9-3f9e-4dac-ba25-0cf6fe4fb2bf" />
 <img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/4001fed8-5089-4d81-a525-39212adf6e7d" />
