@@ -240,7 +240,8 @@ Legend
 | Round 50           |   56.69      | 64.37              | 56.69          |  64.37           |
 | Round 100          |  55.91      | 65.35             | 55.91       |     65.35      |
 
-<img width="482" height="402" alt="image" src="https://github.com/user-attachments/assets/a1d66508-d09e-4c71-ad8f-b13e0fb411df" />
+<img width="401" height="335" alt="image" src="https://github.com/user-attachments/assets/b1de0534-d381-4a7c-9697-5ac8668a4120" />
+
 <img width="419" height="350" alt="image" src="https://github.com/user-attachments/assets/3167de63-1582-4d8f-9c87-d48becbe4243" />
 
 
