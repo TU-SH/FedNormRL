@@ -188,6 +188,40 @@ CNN (modified LeNet-5) + AGN + DQN:
 | $\epsilon$ decay per round            |0.999         |
 | GN groups          |2         |
 
+### Baseline
+**FedNN** (Kang et al., 2024 — Pattern Recognition): FL framework using WN + AGN with `Gumbel-Softmax` trick for normalization selection. Unlike FedNormRL, FedNN's Gumbel-Softmax selection is fixed per client once chosen and does not learn sequentially across communication rounds.
+
+**FedAvg** (McMahan et al., 2017): Standard federated averaging with no normalization — used for additional comparative analysis on DIGIT dataset. 
+
+## Results 
+
+### Accuracy
+
+
+**DIGIT Dataset**
+|Communication Round | FedNN (Test) | FedNormRL (Test) | 
+|--------------------|--------------|------------------|
+| Round 1                | 11.51%             | 25.63%                 |
+| Round 50               | 75.06%             | 81.48%                 |
+| Round 100              | 77.79%             | 81.62%                 |
+
+**Office-Caltech Dataset**
+|Communication Round | FedNN (Test) | FedNormRL (Test) | 
+|--------------------|--------------|------------------|
+| Round 1                | 22.24%             | 27.36%                 |
+| Round 50               | 56.69%             | 64.37%                 |
+| Round 100              | 55.91%             | 65.35%                 |
+
+
+**DomainNet Dataset**
+|Communication Round | FedNN (Test) | FedNormRL (Test) | 
+|--------------------|--------------|------------------|
+| Round 1                | 21.78%             | 30.87%                 |
+| Round 50               | 47.57%             | 59.88%                 |
+| Round 100              | 47.68%             | 61.16%                 |
+
+
+
 
 
 
