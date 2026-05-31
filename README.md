@@ -397,13 +397,13 @@ FedNormRL's advantage grows with drift severity — the more challenging the dat
 
 ## Key References
 
-McMahan et al. (2017) — FedAvg: Communication-Efficient Learning of Deep Networks from Decentralized Data (https://arxiv.org/pdf/1602.05629)
-Kang et al. (2024) — FedNN: Federated learning on concept drift data using weight and adaptive group normalizations — Pattern Recognition, 149, 110230 (https://cnslab.stanford.edu/assets/documents/FedNN-Federated.pdf)
-Du et al. (2022) — Rethinking Normalization Methods in Federated Learning (https://arxiv.org/pdf/2210.03277)
-Ioffe & Szegedy (2015) — Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (https://arxiv.org/pdf/1502.03167)
-Wu & He (2018) — Group Normalization (https://arxiv.org/pdf/1803.08494)
-Salimans & Kingma (2016) — Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks (https://arxiv.org/pdf/1602.07868)
-Sutton & Barto (2018) — Reinforcement Learning: An Introduction (2nd ed.) — MIT Press (https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
+- McMahan et al. (2017) — FedAvg: Communication-Efficient Learning of Deep Networks from Decentralized Data (https://arxiv.org/pdf/1602.05629)
+- Kang et al. (2024) — FedNN: Federated learning on concept drift data using weight and adaptive group normalizations — Pattern Recognition, 149, 110230 (https://cnslab.stanford.edu/assets/documents/FedNN-Federated.pdf)
+- Du et al. (2022) — Rethinking Normalization Methods in Federated Learning (https://arxiv.org/pdf/2210.03277)
+- Ioffe & Szegedy (2015) — Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (https://arxiv.org/pdf/1502.03167)
+- Wu & He (2018) — Group Normalization (https://arxiv.org/pdf/1803.08494)
+- Salimans & Kingma (2016) — Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks (https://arxiv.org/pdf/1602.07868)
+- Sutton & Barto (2018) — Reinforcement Learning: An Introduction (2nd ed.) — MIT Press (https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
 
 
 
